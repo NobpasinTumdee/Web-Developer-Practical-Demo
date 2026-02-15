@@ -93,12 +93,23 @@ body {
     pointer-events: none;
 }
 
+.img-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .main-title {
     position: fixed;
     justify-content: center;
     width: 100%;
     top: 40px;
-    z-index: 2;
+    z-index: 1000;
     text-align: center;
     font-size: 16vw;
     font-family: Arial;
@@ -186,4 +197,104 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: #555;
+}
+
+
+
+
+
+
+
+.content-hero-3-container {
+    width: calc(100vw - 30%);
+    padding: 0 15% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper-3 {
+    position: relative;
+    width: 100%;
+    height: 475px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper-3 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+    display: block;
+    justify-content: center;
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper-3:hover .img-hero {
+    opacity: 0;
+}
+
+.sticky-label-3 {
+    transform: translateY(-50%);
+
+    margin: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    z-index: 3;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+
+
+.image-collection {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.image-collection-div {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.image-collection-child {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sticky-label-collection {
+    margin: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 3;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 }
